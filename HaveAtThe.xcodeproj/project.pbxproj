@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		85B9341C2B07EDB40001394E /* HaveAtTheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */; };
-		85B9341E2B07EDB40001394E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9341D2B07EDB40001394E /* ContentView.swift */; };
 		85B934202B07EDB60001394E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B9341F2B07EDB60001394E /* Assets.xcassets */; };
 		85B934242B07EDB60001394E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B934232B07EDB60001394E /* Preview Assets.xcassets */; };
+		85B9342B2B07EDDB0001394E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9342A2B07EDDB0001394E /* ContentView.swift */; };
+		85B9342D2B07EDE20001394E /* Insult Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9342C2B07EDE20001394E /* Insult Generator.swift */; };
+		85B9342F2B07EDE90001394E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B9342E2B07EDE90001394E /* Launch Screen.storyboard */; };
+		85BE01F02B1BF6DF00AE90E7 /* Insult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE01EF2B1BF6DF00AE90E7 /* Insult.swift */; };
+		85C000462B167C9B007F4E70 /* ActivityVCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		85B934182B07EDB40001394E /* HaveAtThe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaveAtThe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveAtTheApp.swift; sourceTree = "<group>"; };
-		85B9341D2B07EDB40001394E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85B9341F2B07EDB60001394E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B934212B07EDB60001394E /* HaveAtThe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaveAtThe.entitlements; sourceTree = "<group>"; };
 		85B934232B07EDB60001394E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85B9342A2B07EDDB0001394E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85B9342C2B07EDE20001394E /* Insult Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Insult Generator.swift"; sourceTree = "<group>"; };
+		85B9342E2B07EDE90001394E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		85BE01EF2B1BF6DF00AE90E7 /* Insult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insult.swift; sourceTree = "<group>"; };
+		85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVCWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */,
-				85B9341D2B07EDB40001394E /* ContentView.swift */,
+				85B9342A2B07EDDB0001394E /* ContentView.swift */,
+				85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */,
+				85B9342C2B07EDE20001394E /* Insult Generator.swift */,
+				85BE01EF2B1BF6DF00AE90E7 /* Insult.swift */,
+				85B9342E2B07EDE90001394E /* Launch Screen.storyboard */,
 				85B9341F2B07EDB60001394E /* Assets.xcassets */,
 				85B934212B07EDB60001394E /* HaveAtThe.entitlements */,
 				85B934222B07EDB60001394E /* Preview Content */,
@@ -127,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B9342F2B07EDE90001394E /* Launch Screen.storyboard in Resources */,
 				85B934242B07EDB60001394E /* Preview Assets.xcassets in Resources */,
 				85B934202B07EDB60001394E /* Assets.xcassets in Resources */,
 			);
@@ -139,7 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85B9341E2B07EDB40001394E /* ContentView.swift in Sources */,
+				85B9342D2B07EDE20001394E /* Insult Generator.swift in Sources */,
+				85BE01F02B1BF6DF00AE90E7 /* Insult.swift in Sources */,
+				85C000462B167C9B007F4E70 /* ActivityVCWrapper.swift in Sources */,
+				85B9342B2B07EDDB0001394E /* ContentView.swift in Sources */,
 				85B9341C2B07EDB40001394E /* HaveAtTheApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,7 +215,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -254,7 +272,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -266,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = HaveAtThe/HaveAtThe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -274,20 +295,23 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Have At Thee";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.majorssoft.HaveAtThe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = HaveAtThe/HaveAtThe.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -312,20 +337,23 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Have At Thee";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.majorssoft.HaveAtThe;
 				PRODUCT_NAME = "$(TARGET_NAME)";

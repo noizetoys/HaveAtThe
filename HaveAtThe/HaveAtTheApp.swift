@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 @main
 struct HaveAtTheApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+//        .modelContainer(for: [Insult.self])
     }
 }
