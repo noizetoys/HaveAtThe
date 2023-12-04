@@ -9,10 +9,10 @@ import SwiftData
 import Foundation
 
 
-//@Model
+@Model
 class Insult {
-//    @Attribute private(set) var id: UUID
-    private(set) var id: UUID
+    @Attribute private(set) var id: UUID
+//    private(set) var id: UUID
     
     private(set) var preface: String
     private(set) var firstLine: String
@@ -23,12 +23,12 @@ class Insult {
     private(set) var secondCharacter: String
     private(set) var playCitation: String
     
-//    @Transient
+    @Transient
     var insultText: String {
         "\(preface)\(firstLine) \(secondLine) \(thirdLine)"
     }
     
-//    @Transient
+    @Transient
     var citationText: String {
         "\(firstCharacter) to \(secondCharacter):\n \(playCitation)"
     }

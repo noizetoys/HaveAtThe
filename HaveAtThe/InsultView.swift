@@ -12,6 +12,7 @@ struct InsultView: View {
     @Environment(\.modelContext) private var context
     
     @State private var showShareSheet: Bool = false
+    @State private var showSavedAlert: Bool = false
     @State private var insult: Insult = .init()
     
     private let shareItem: ShareItemSource
@@ -25,17 +26,6 @@ struct InsultView: View {
     
     var body: some View {
         VStack {
-            HStack {
-//                saveButton
-                
-                Spacer()
-                
-                shareButton
-                    .frame(width: 60, height: 60)
-            }
-            .padding(.horizontal)
-            .padding(.top)
-            
             Spacer()
             
             insultTextView
@@ -46,12 +36,33 @@ struct InsultView: View {
                 .padding(.bottom)
         }
         .foregroundStyle(.black)
-        .background(backgroundImage)
+        .background(BackgroundBillView())
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Menu("Actions", systemImage: "ellipsis.circle") {
+                    Button {
+                        showShareSheet.toggle()
+                    } label: {
+                        Label("Share", systemImage: "square.and.arrow.up")
+                    }
+
+                    Button {
+                        saveInsult()
+                        showSavedAlert.toggle()
+                    } label: {
+                        Label("Save", systemImage: "square.and.arrow.down")
+                    }
+                }
+            }
+        }
         .onTapGesture {
             generateNewInsult()
         }
         .sheet(isPresented: $showShareSheet) {
             ActivityVCWrapper(activityItems: [shareItem])
+        }
+        .alert("Saved for later use!", isPresented: $showSavedAlert) {
+            Button("OK", role: .cancel, action: { })
         }
     }
     
@@ -67,57 +78,12 @@ struct InsultView: View {
     }
     
     
+    private func saveInsult() {
+        context.insert(insult)
+    }
+    
+    
     // MARK: - Views
-    
-    
-    private var shareButton: some View {
-        Button(action: {
-            showShareSheet.toggle()
-        }, label: {
-            Image(systemName: "square.and.arrow.up")
-                .bold()
-        })
-        .padding()
-        .background(Color.white)
-        .foregroundStyle(.black)
-        .clipShape(Circle())
-        .overlay {
-            Circle()
-                .stroke(Color.black, lineWidth: 1)
-                .foregroundStyle(.clear)
-        }
-
-    }
-    
-    
-    private var saveButton: some View {
-        Button(action: {
-            
-        }, label: {
-            Text("Favorite")
-                .bold()
-        })
-        .padding()
-        .background(Color.white)
-        .foregroundStyle(.black)
-        .clipShape(Capsule())
-        .overlay {
-            Capsule()
-                .stroke(Color.black, lineWidth: 1)
-                .foregroundStyle(.clear)
-        }
-    }
-    
-    
-    private var backgroundImage: some View {
-        ZStack {
-            Image("BillCropped")
-                .aspectRatio(contentMode: .fill)
-            
-            Color.white.opacity(0.95)
-        }
-    }
-    
     
     private var insultTextView: some View {
         VStack(spacing: 15) {
@@ -162,7 +128,6 @@ struct InsultView: View {
             .multilineTextAlignment(.leading)
             .lineLimit(2)
     }
-    
 }
 
 
