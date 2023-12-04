@@ -10,6 +10,8 @@ import SwiftData
 
 
 struct MainView: View {
+    @Environment(\.modelContext) private var modelContext
+
     @State private var showNewInsultView: Bool = false
     @State private var showInsultListView: Bool = false
     
@@ -20,8 +22,7 @@ struct MainView: View {
         NavigationStack {
             VStack(spacing: 20) {
                 
-//                if insults.count == 0 {
-                if insults.count > 100 {
+                if insults.count == 0 {
                     noSavedInsultsView
                 }
                 else {
@@ -35,18 +36,18 @@ struct MainView: View {
                 InsultView()
             }
             .navigationDestination(isPresented: $showInsultListView) {
-                InsultView()
+                InsultListView()
             }
+            .padding()
         }
     }
     
     
-    // State Views
-    // Fresh or No saved Insults
+    // MARK: - Views
     
     private var noSavedInsultsView: some View {
         VStack {
-            buttonText("Tap to Create New Insult!")
+            buttonText("Tap to Create New Insult")
         }
         .background(BackgroundBillView())
         .onTapGesture {
@@ -55,8 +56,6 @@ struct MainView: View {
     }
     
     
-    
-    // 1 or more saved insults
     private var newInsultButton: some View {
         Button {
             showNewInsultView.toggle()
@@ -67,7 +66,7 @@ struct MainView: View {
                 
                 Color.white.opacity(0.95)
                 
-                buttonText("Tap to Create New Insult!")
+                buttonText("Tap to Create New Insult")
             }
         }
         .background(.gray.opacity(0.2))
@@ -86,7 +85,7 @@ struct MainView: View {
                 
                 Color.white.opacity(0.85)
                 
-                buttonText("Relive an Insult!")
+                buttonText("View Saved Insults")
             }
             
         }
@@ -94,6 +93,9 @@ struct MainView: View {
         .clipShape(RoundedRectangle(cornerRadius: 25.0))
 
     }
+    
+    
+    // MARK: - Private Func
     
     private func buttonText(_ text: String) -> some View {
         Text(text)
@@ -104,32 +106,6 @@ struct MainView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity )
     }
     
-    
-    
-//    @ViewBuilder
-//    private var backgroundImage: some View {
-//        if insults.count > 0 {
-//            ZStack {
-//                Image("BillCropped")
-//                    .resizable()
-//                
-//                Color.white.opacity(0.95)
-//                
-//                buttonText("Tap to Create New Insult!")
-//            }
-//        }
-//        else {
-//            ZStack {
-//                Image("BillCropped")
-//                    .aspectRatio(contentMode: .fill)
-//                
-//                Color.white.opacity(0.95)
-//                
-//                buttonText("Tap to Create New Insult!")
-//            }
-//        }
-//    }
-
 }
 
 

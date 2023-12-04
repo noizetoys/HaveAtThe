@@ -22,10 +22,7 @@ struct ActivityVCWrapper: UIViewControllerRepresentable {
     }
     
     
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
-        
-    }
-    
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) { }
 }
 
 
@@ -34,12 +31,20 @@ class ShareItemSource: NSObject, UIActivityItemSource {
     var citation: String
     
     
-    init(insult: String, citation: String) {
+    init(insult: String = "", citation: String = "") {
         self.insult = insult
         self.citation = citation
         super.init()
     }
     
+    
+    func update(using insult: Insult) {
+        self.insult = insult.insultText
+        self.citation = insult.citationText
+    }
+    
+    
+    // UIActivityItemSource
     
     func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
         "\(insult) - \(citation)"

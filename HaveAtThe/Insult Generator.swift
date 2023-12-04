@@ -12,7 +12,6 @@ fileprivate let showLongest: Bool = false
 
 
 class InsultGenerator {
-//    static private let preface = "Thou"
     static private let preface = ""
     
     static private let PartOne = [
@@ -224,7 +223,7 @@ class InsultGenerator {
         if line < 100 {
             linesString = "\(line)-\(secondLine)"
         }
-        else { // > 100
+        else { 
             let lineMag = lineMagnitude(for: line)
             let secLineMag = lineMagnitude(for: secondLine)
             

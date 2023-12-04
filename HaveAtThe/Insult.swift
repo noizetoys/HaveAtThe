@@ -11,8 +11,7 @@ import Foundation
 
 @Model
 class Insult {
-    @Attribute private(set) var id: UUID
-//    private(set) var id: UUID
+    @Attribute private(set) var id: Date
     
     private(set) var preface: String
     private(set) var firstLine: String
@@ -30,11 +29,19 @@ class Insult {
     
     @Transient
     var citationText: String {
-        "\(firstCharacter) to \(secondCharacter):\n \(playCitation)"
+        "\(charactersText):\n \(playCitation)"
     }
+    
+    @Transient
+    var charactersText: String {
+        "\(firstCharacter) to \(secondCharacter)"
+    }
+    
 
-    init(id: UUID = UUID(),
-         preface: String = "Thou...",
+    // MARK: - Lifecycle
+    
+    init(id: Date = .now,
+         preface: String = "Thou",
          firstLine: String = InsultGenerator.firstPart,
          secondLine: String = InsultGenerator.secondPart,
          thirdLine: String = InsultGenerator.thirdPart ,

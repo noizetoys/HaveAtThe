@@ -17,6 +17,7 @@
 		85C000462B167C9B007F4E70 /* ActivityVCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */; };
 		85E4271F2B1E22480070D6E2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4271E2B1E22480070D6E2 /* MainView.swift */; };
 		85EDB3872B1E37F600B292E4 /* HelperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDB3862B1E37F600B292E4 /* HelperViews.swift */; };
+		85EDB38A2B1E44FE00B292E4 /* InsultListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EDB3892B1E44FE00B292E4 /* InsultListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVCWrapper.swift; sourceTree = "<group>"; };
 		85E4271E2B1E22480070D6E2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		85EDB3862B1E37F600B292E4 /* HelperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViews.swift; sourceTree = "<group>"; };
+		85EDB3892B1E44FE00B292E4 /* InsultListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +67,11 @@
 			isa = PBXGroup;
 			children = (
 				85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */,
-				85E4271E2B1E22480070D6E2 /* MainView.swift */,
-				85B9342A2B07EDDB0001394E /* InsultView.swift */,
+				85EDB3882B1E44DF00B292E4 /* Views */,
+				85EDB3862B1E37F600B292E4 /* HelperViews.swift */,
 				85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */,
 				85B9342C2B07EDE20001394E /* Insult Generator.swift */,
 				85BE01EF2B1BF6DF00AE90E7 /* Insult.swift */,
-				85EDB3862B1E37F600B292E4 /* HelperViews.swift */,
 				85B9342E2B07EDE90001394E /* Launch Screen.storyboard */,
 				85B9341F2B07EDB60001394E /* Assets.xcassets */,
 				85B934212B07EDB60001394E /* HaveAtThe.entitlements */,
@@ -85,6 +86,16 @@
 				85B934232B07EDB60001394E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85EDB3882B1E44DF00B292E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85E4271E2B1E22480070D6E2 /* MainView.swift */,
+				85B9342A2B07EDDB0001394E /* InsultView.swift */,
+				85EDB3892B1E44FE00B292E4 /* InsultListView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 				85BE01F02B1BF6DF00AE90E7 /* Insult.swift in Sources */,
 				85C000462B167C9B007F4E70 /* ActivityVCWrapper.swift in Sources */,
 				85EDB3872B1E37F600B292E4 /* HelperViews.swift in Sources */,
+				85EDB38A2B1E44FE00B292E4 /* InsultListView.swift in Sources */,
 				85B9342B2B07EDDB0001394E /* InsultView.swift in Sources */,
 				85B9341C2B07EDB40001394E /* HaveAtTheApp.swift in Sources */,
 			);

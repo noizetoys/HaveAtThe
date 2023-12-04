@@ -15,11 +15,10 @@ struct InsultView: View {
     @State private var showSavedAlert: Bool = false
     @State private var insult: Insult = .init()
     
-    private let shareItem: ShareItemSource
+    private let shareItem: ShareItemSource = .init()
     
     
     init() {
-        shareItem = ShareItemSource(insult: "", citation: "")
         generateNewInsult()
     }
     
@@ -43,14 +42,14 @@ struct InsultView: View {
                     Button {
                         showShareSheet.toggle()
                     } label: {
-                        Label("Share", systemImage: "square.and.arrow.up")
+                        Label("Share Insult", systemImage: "square.and.arrow.up")
                     }
 
                     Button {
                         saveInsult()
                         showSavedAlert.toggle()
                     } label: {
-                        Label("Save", systemImage: "square.and.arrow.down")
+                        Label("Save Insult", systemImage: "square.and.arrow.down")
                     }
                 }
             }
@@ -61,7 +60,7 @@ struct InsultView: View {
         .sheet(isPresented: $showShareSheet) {
             ActivityVCWrapper(activityItems: [shareItem])
         }
-        .alert("Saved for later use!", isPresented: $showSavedAlert) {
+        .alert("Insult Saved", isPresented: $showSavedAlert) {
             Button("OK", role: .cancel, action: { })
         }
     }
@@ -72,8 +71,7 @@ struct InsultView: View {
     private func generateNewInsult() {
         withAnimation {
             insult = .init()
-            shareItem.insult = insult.insultText
-            shareItem.citation = insult.citationText
+            shareItem.update(using: insult)
         }
     }
     
@@ -87,7 +85,7 @@ struct InsultView: View {
     
     private var insultTextView: some View {
         VStack(spacing: 15) {
-            Text(insult.preface)
+            Text("\(insult.preface)...")
                 .font(.system(size: 24, weight: .bold))
             
             Text(insult.firstLine)
