@@ -33,18 +33,22 @@ class Insult {
         "\(firstCharacter) to \(secondCharacter):\n \(playCitation)"
     }
 
-    
-    init() {
-        id = UUID()
-        preface = "Thou..."
-        firstLine = InsultGenerator.firstPart
-        secondLine = InsultGenerator.secondPart
-        thirdLine = InsultGenerator.thirdPart
-        
-        firstCharacter = Characters.randomCharacter()
-        secondCharacter = Characters.randomCharacter()
-        
-        playCitation = InsultGenerator.playCitation()
+    init(id: UUID = UUID(),
+         preface: String = "Thou...",
+         firstLine: String = InsultGenerator.firstPart,
+         secondLine: String = InsultGenerator.secondPart,
+         thirdLine: String = InsultGenerator.thirdPart ,
+         firstCharacter: String = Characters.randomCharacter(),
+         secondCharacter: String = Characters.randomCharacter(),
+         playCitation: String = InsultGenerator.playCitation()) {
+        self.id = id
+        self.preface = preface
+        self.firstLine = firstLine
+        self.secondLine = secondLine
+        self.thirdLine = thirdLine
+        self.firstCharacter = firstCharacter
+        self.secondCharacter = secondCharacter
+        self.playCitation = playCitation
     }
     
 }

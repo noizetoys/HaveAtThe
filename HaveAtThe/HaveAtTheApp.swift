@@ -14,7 +14,8 @@ struct HaveAtTheApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            InsultView()
+            MainView()
         }
 //        .modelContainer(for: [Insult.self])
     }

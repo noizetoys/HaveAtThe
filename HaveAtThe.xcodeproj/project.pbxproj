@@ -10,11 +10,12 @@
 		85B9341C2B07EDB40001394E /* HaveAtTheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */; };
 		85B934202B07EDB60001394E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B9341F2B07EDB60001394E /* Assets.xcassets */; };
 		85B934242B07EDB60001394E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B934232B07EDB60001394E /* Preview Assets.xcassets */; };
-		85B9342B2B07EDDB0001394E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9342A2B07EDDB0001394E /* ContentView.swift */; };
+		85B9342B2B07EDDB0001394E /* InsultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9342A2B07EDDB0001394E /* InsultView.swift */; };
 		85B9342D2B07EDE20001394E /* Insult Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9342C2B07EDE20001394E /* Insult Generator.swift */; };
 		85B9342F2B07EDE90001394E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B9342E2B07EDE90001394E /* Launch Screen.storyboard */; };
 		85BE01F02B1BF6DF00AE90E7 /* Insult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BE01EF2B1BF6DF00AE90E7 /* Insult.swift */; };
 		85C000462B167C9B007F4E70 /* ActivityVCWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */; };
+		85E4271F2B1E22480070D6E2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E4271E2B1E22480070D6E2 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +24,12 @@
 		85B9341F2B07EDB60001394E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B934212B07EDB60001394E /* HaveAtThe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HaveAtThe.entitlements; sourceTree = "<group>"; };
 		85B934232B07EDB60001394E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85B9342A2B07EDDB0001394E /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		85B9342A2B07EDDB0001394E /* InsultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsultView.swift; sourceTree = "<group>"; };
 		85B9342C2B07EDE20001394E /* Insult Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Insult Generator.swift"; sourceTree = "<group>"; };
 		85B9342E2B07EDE90001394E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		85BE01EF2B1BF6DF00AE90E7 /* Insult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insult.swift; sourceTree = "<group>"; };
 		85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVCWrapper.swift; sourceTree = "<group>"; };
+		85E4271E2B1E22480070D6E2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */,
-				85B9342A2B07EDDB0001394E /* ContentView.swift */,
+				85E4271E2B1E22480070D6E2 /* MainView.swift */,
+				85B9342A2B07EDDB0001394E /* InsultView.swift */,
 				85C000452B167C9B007F4E70 /* ActivityVCWrapper.swift */,
 				85B9342C2B07EDE20001394E /* Insult Generator.swift */,
 				85BE01EF2B1BF6DF00AE90E7 /* Insult.swift */,
@@ -153,9 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				85B9342D2B07EDE20001394E /* Insult Generator.swift in Sources */,
+				85E4271F2B1E22480070D6E2 /* MainView.swift in Sources */,
 				85BE01F02B1BF6DF00AE90E7 /* Insult.swift in Sources */,
 				85C000462B167C9B007F4E70 /* ActivityVCWrapper.swift in Sources */,
-				85B9342B2B07EDDB0001394E /* ContentView.swift in Sources */,
+				85B9342B2B07EDDB0001394E /* InsultView.swift in Sources */,
 				85B9341C2B07EDB40001394E /* HaveAtTheApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

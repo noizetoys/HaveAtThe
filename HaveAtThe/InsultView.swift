@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  InsultView.swift
 //  Shakespeare Insult Kit
 //
 //  Created by Apple User on 11/16/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct InsultView: View {
     @Environment(\.modelContext) private var context
     
     @State private var showShareSheet: Bool = false
@@ -167,7 +167,7 @@ struct ContentView: View {
 
 
 #Preview("15 Pro Port") {
-    ContentView()
+    InsultView()
         .previewDevice(PreviewDevice(rawValue: "iPhone 15 Pro"))
 }
 
