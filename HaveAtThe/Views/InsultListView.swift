@@ -50,7 +50,6 @@ struct InsultListView: View {
             }
             .navigationTitle("Past Brilliance")
             .navigationBarTitleDisplayMode(.large)
-
         }
         
     }
@@ -96,10 +95,9 @@ struct InsultListView: View {
                 .italic()
         }
     }
-    
-    
 
 }
+
 
 #Preview {
     InsultListView()

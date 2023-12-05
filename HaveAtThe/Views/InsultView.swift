@@ -60,7 +60,7 @@ struct InsultView: View {
         .sheet(isPresented: $showShareSheet) {
             ActivityVCWrapper(activityItems: [shareItem])
         }
-        .alert("Insult Saved", isPresented: $showSavedAlert) {
+        .alert("Insult Saved!", isPresented: $showSavedAlert) {
             Button("OK", role: .cancel, action: { })
         }
     }

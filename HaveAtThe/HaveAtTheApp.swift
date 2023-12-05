@@ -18,4 +18,5 @@ struct HaveAtTheApp: App {
         }
         .modelContainer(for: Insult.self)
     }
+    
 }

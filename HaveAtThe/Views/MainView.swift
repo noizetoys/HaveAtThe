@@ -14,36 +14,60 @@ struct MainView: View {
 
     @State private var showNewInsultView: Bool = false
     @State private var showInsultListView: Bool = false
+    @State private var isPortrait: Bool = true
     
     @Query private var insults: [Insult]
     
     
     var body: some View {
         NavigationStack {
-            VStack(spacing: 20) {
-                
-                if insults.count == 0 {
-                    noSavedInsultsView
+            orientationAwareView
+                .padding()
+                .navigationDestination(isPresented: $showNewInsultView) {
+                    InsultView()
                 }
-                else {
-                    newInsultButton
-                    
-                    insultsListButton
+                .navigationDestination(isPresented: $showInsultListView) {
+                    InsultListView()
                 }
-                
-            }
-            .navigationDestination(isPresented: $showNewInsultView) {
-                InsultView()
-            }
-            .navigationDestination(isPresented: $showInsultListView) {
-                InsultListView()
-            }
-            .padding()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
+            let orientation = UIDevice.current.orientation
+            isPortrait = orientation == .portrait || orientation == .portraitUpsideDown
         }
     }
     
     
     // MARK: - Views
+    
+    @ViewBuilder
+    private var orientationAwareView: some View {
+        Group {
+            if isPortrait {
+                VStack(spacing: 20) {
+                    actualContentView
+                }
+            }
+            else {
+                HStack(spacing: 20) {
+                    actualContentView
+                }
+            }
+        }
+    }
+    
+    
+    @ViewBuilder
+    private var actualContentView: some View {
+        if insults.count == 0 {
+            noSavedInsultsView
+        }
+        else {
+            newInsultButton
+            
+            insultsListButton
+        }
+    }
+    
     
     private var noSavedInsultsView: some View {
         VStack {
@@ -71,7 +95,6 @@ struct MainView: View {
         }
         .background(.gray.opacity(0.2))
         .clipShape(RoundedRectangle(cornerRadius: 25.0))
-        
     }
     
     
@@ -87,7 +110,6 @@ struct MainView: View {
                 
                 buttonText("View Saved Insults")
             }
-            
         }
         .background(.gray.opacity(0.2))
         .clipShape(RoundedRectangle(cornerRadius: 25.0))
