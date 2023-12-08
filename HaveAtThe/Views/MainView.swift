@@ -7,9 +7,10 @@
 
 import SwiftUI
 import SwiftData
+import TipKit
 
 
-struct MainView: View {
+struct MainView: View, DeviceRecognizable {
     @Environment(\.modelContext) private var modelContext
 
     @State private var showNewInsultView: Bool = false
@@ -85,10 +86,7 @@ struct MainView: View {
             showNewInsultView.toggle()
         } label: {
             ZStack {
-                Image("BillCropped")
-                    .resizable()
-                
-                Color.white.opacity(0.95)
+                BackgroundBillView(aspectRatio: .fit, resize: true)
                 
                 buttonText("Tap to Create New Insult")
             }
@@ -121,7 +119,7 @@ struct MainView: View {
     
     private func buttonText(_ text: String) -> some View {
         Text(text)
-            .font(.title)
+            .font(isOniPad ? .largeTitle : .title)
             .bold()
             .italic()
             .foregroundStyle(.black)
@@ -132,5 +130,9 @@ struct MainView: View {
 
 
 #Preview {
-    MainView()
+//    try! Tips.resetDatastore()
+//    try? Tips.configure()
+    
+    return MainView()
+        .modelContainer(for: Insult.self)
 }

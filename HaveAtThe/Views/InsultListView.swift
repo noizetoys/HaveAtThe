@@ -11,6 +11,7 @@ import SwiftData
 
 struct InsultListView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(\.editMode) private var editMode
     
     @State private var showShareSheet: Bool = false
     @State private var showNewInsultView: Bool = false
@@ -48,6 +49,9 @@ struct InsultListView: View {
                     ActivityVCWrapper(activityItems: [shareItem])
                 }
             }
+            .toolbar {
+                EditButton()
+            }
             .navigationTitle("Past Brilliance")
             .navigationBarTitleDisplayMode(.large)
         }
@@ -60,6 +64,7 @@ struct InsultListView: View {
     private var noContentView: some View {
         ContentUnavailableView {
             Label("No Insults Saved!", systemImage: "pencil.and.scribble")
+                .symbolEffect(.pulse, options: .repeating)
                 .font(.largeTitle)
         } actions: {
             Button {
@@ -83,16 +88,24 @@ struct InsultListView: View {
     
     
     private func insultCell(for insult: Insult) -> some View {
-        VStack(alignment: .leading) {
-            Text(insult.insultText)
-                .font(.headline)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(insult.insultText)
+                    .font(.headline)
+                
+                Text(insult.charactersText)
+                    .font(.subheadline)
+                
+                Text(insult.playCitation)
+                    .font(.caption2)
+                    .italic()
+            }
             
-            Text(insult.charactersText)
-                .font(.subheadline)
+            Spacer()
             
-            Text(insult.playCitation)
-                .font(.caption2)
-                .italic()
+            Image(systemName: "square.and.arrow.up")
+                .foregroundStyle(.blue)
+                .font(.title3)
         }
     }
 
@@ -101,4 +114,5 @@ struct InsultListView: View {
 
 #Preview {
     InsultListView()
+        .modelContainer(for: Insult.self)
 }

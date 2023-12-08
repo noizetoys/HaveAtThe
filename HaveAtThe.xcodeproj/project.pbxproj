@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851D72322B220C92005E776E /* InsultViewTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851D72312B220C92005E776E /* InsultViewTip.swift */; };
 		85B9341C2B07EDB40001394E /* HaveAtTheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */; };
 		85B934202B07EDB60001394E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B9341F2B07EDB60001394E /* Assets.xcassets */; };
 		85B934242B07EDB60001394E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B934232B07EDB60001394E /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851D72312B220C92005E776E /* InsultViewTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsultViewTip.swift; sourceTree = "<group>"; };
 		85B934182B07EDB40001394E /* HaveAtThe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HaveAtThe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85B9341B2B07EDB40001394E /* HaveAtTheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaveAtTheApp.swift; sourceTree = "<group>"; };
 		85B9341F2B07EDB60001394E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				85E4271E2B1E22480070D6E2 /* MainView.swift */,
 				85B9342A2B07EDDB0001394E /* InsultView.swift */,
+				851D72312B220C92005E776E /* InsultViewTip.swift */,
 				85EDB3892B1E44FE00B292E4 /* InsultListView.swift */,
 			);
 			path = Views;
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85B9342D2B07EDE20001394E /* Insult Generator.swift in Sources */,
+				851D72322B220C92005E776E /* InsultViewTip.swift in Sources */,
 				85E4271F2B1E22480070D6E2 /* MainView.swift in Sources */,
 				85BE01F02B1BF6DF00AE90E7 /* Insult.swift in Sources */,
 				85C000462B167C9B007F4E70 /* ActivityVCWrapper.swift in Sources */,
